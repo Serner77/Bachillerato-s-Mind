@@ -1,0 +1,253 @@
+<div class="container-fluid px-0">
+
+  <h1 class="h4 mb-1">Progreso académico</h1>
+  <p class="text-muted mb-4">
+    Revisa tu evolución por asignaturas, identifica puntos fuertes y descubre qué puedes mejorar.
+  </p>
+
+  <div class="row g-4 mb-4">
+
+    <!-- ============================ -->
+    <!-- KPI PRINCIPALES DEL PROGRESO -->
+    <!-- ============================ -->
+    <div class="col-12 col-md-4">
+      <div class="bm-card card h-100">
+        <div class="card-body d-flex justify-content-between align-items-start">
+          <div>
+            <div class="bm-kpi-number">7,4</div>
+            <div class="bm-kpi-label">Media global últimos 30 días</div>
+          </div>
+          <span class="badge-soft badge-soft-success">
+            <i class="bi bi-arrow-up-right"></i> +0,3
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="bm-card card h-100">
+        <div class="card-body d-flex justify-content-between align-items-start">
+          <div>
+            <div class="bm-kpi-number">82%</div>
+            <div class="bm-kpi-label">Tareas completadas</div>
+          </div>
+          <span class="badge-soft badge-soft-primary">
+            <i class="bi bi-check-circle"></i> Buen ritmo
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="bm-card card h-100">
+        <div class="card-body d-flex justify-content-between align-items-start">
+          <div>
+            <div class="bm-kpi-number">5</div>
+            <div class="bm-kpi-label">Tests realizados esta semana</div>
+          </div>
+          <span class="badge-soft badge-soft-warning">
+            <i class="bi bi-lightning-charge"></i> Sigue así
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================ -->
+  <!--   GRÁFICA + INFORME DE ASIGNATURA -->
+  <!-- ================================ -->
+  <div class="row g-4 mb-4">
+
+    <!-- INFORME RESUMIDO -->
+    <div class="col-12 col-xl-5">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Informe de rendimiento</h2>
+          <span class="badge-soft badge-soft-primary">
+            <i class="bi bi-graph-up"></i> Análisis
+          </span>
+        </div>
+
+        <div class="card-body small">
+          <p>
+            Durante el último mes has mostrado una mejora constante en <strong>Matemáticas II</strong> y
+            <strong>Física</strong>, especialmente en los temas que han sido reforzados en clase.
+          </p>
+
+          <ul class="list-unstyled mb-3">
+            <li class="mb-2">
+              <i class="bi bi-check2-circle text-primary me-2"></i>
+              Mejoría destacable en resolución de problemas.
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check2-circle text-primary me-2"></i>
+              Gran avance en ejercicios de derivadas e integrales.
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-exclamation-circle text-warning me-2"></i>
+              Necesitas reforzar comentario de texto en Lengua.
+            </li>
+          </ul>
+
+          <div class="alert alert-light border-0 mb-0 d-flex align-items-start gap-2">
+            <i class="bi bi-info-circle text-primary mt-1"></i>
+            <div>
+              El sistema detecta que si continúas con esta tendencia mejorarás tu media en +0,6 durante el próximo mes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRÁFICA -->
+    <div class="col-12 col-xl-7">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Evolución por asignaturas</h2>
+          <span class="small text-muted">Últimos 30 días</span>
+        </div>
+
+        <div class="card-body">
+          <canvas id="progresoChart" height="130"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== -->
+  <!-- TABLA DE ASIGNATURAS -->
+  <!-- ===================== -->
+  <div class="row g-4 mb-4">
+    <div class="col-12">
+      <div class="bm-card card">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Progreso detallado por asignatura</h2>
+        </div>
+
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover bm-table align-middle">
+              <thead>
+                <tr>
+                  <th>Asignatura</th>
+                  <th>Media</th>
+                  <th>Último test</th>
+                  <th>Tendencia</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Matemáticas II</td>
+                  <td>7,8</td>
+                  <td>8,2</td>
+                  <td><span class="badge-soft badge-soft-success">Mejorando</span></td>
+                  <td><i class="bi bi-arrow-up-right text-success"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Física</td>
+                  <td>7,1</td>
+                  <td>6,4</td>
+                  <td><span class="badge-soft badge-soft-warning">Inestable</span></td>
+                  <td><i class="bi bi-arrow-left-right text-warning"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Lengua</td>
+                  <td>6,5</td>
+                  <td>6,2</td>
+                  <td><span class="badge-soft badge-soft-warning">A reforzar</span></td>
+                  <td><i class="bi bi-arrow-down text-danger"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Inglés</td>
+                  <td>7,9</td>
+                  <td>8,0</td>
+                  <td><span class="badge-soft badge-soft-success">Estable</span></td>
+                  <td><i class="bi bi-check-circle text-success"></i></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== -->
+  <!-- RECOMENDACIONES -->
+  <!-- ===================== -->
+  <div class="row g-4 mb-2">
+    <div class="col-12 col-xl-5">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Recomendado según tu progreso</h2>
+          <span class="badge-soft badge-soft-primary">
+            <i class="bi bi-stars"></i> Personalizado
+          </span>
+        </div>
+
+        <div class="card-body small">
+          <ul class="list-unstyled mb-3">
+            <li class="mb-3">
+              <strong>Repasar comentario de texto</strong><br>
+              <span class="text-muted">Área de mejora detectada · 15 min</span>
+            </li>
+            <li class="mb-3">
+              <strong>Test corto de derivadas</strong><br>
+              <span class="text-muted">Basado en tu disminución de errores</span>
+            </li>
+            <li class="mb-3">
+              <strong>Vídeo: Física — Leyes de Newton</strong><br>
+              <span class="text-muted">Recomendado por rendimiento reciente</span>
+            </li>
+          </ul>
+
+          <button class="btn btn-primary w-100 mb-2">
+            <i class="bi bi-lightning-charge me-1"></i> Empezar recomendación
+          </button>
+          <button class="btn btn-outline-primary w-100">
+            <i class="bi bi-play-circle me-1"></i> Ver vídeo recomendado
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTIVIDAD RECIENTE -->
+    <div class="col-12 col-xl-7">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Actividad reciente</h2>
+          <span class="small text-muted">Últimos días</span>
+        </div>
+
+        <div class="card-body">
+          <div class="d-flex flex-column gap-3 small">
+            <div>
+              <strong>Has mejorado tu precisión en problemas de Física.</strong><br>
+              <span class="text-muted">Hace 3 horas</span>
+            </div>
+
+            <div>
+              <strong>Nuevo test completado en Matemáticas II: 8,2.</strong><br>
+              <span class="text-muted">Ayer</span>
+            </div>
+
+            <div>
+              <strong>Has bajado el tiempo de resolución en ejercicios de integrales.</strong><br>
+              <span class="text-muted">Hace 2 días</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

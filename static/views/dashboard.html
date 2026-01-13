@@ -1,0 +1,306 @@
+<div id="view-inicio">
+
+  <!-- Greeting + chips -->
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+    <div>
+      <h1 class="h4 mb-1">Hola, Ana 👋</h1>
+      <p class="text-muted mb-0">Este es tu panel para planificar la semana y ver cómo vas avanzando.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2">
+      <span class="bm-pill">
+        <i class="bi bi-check-circle"></i> Productividad alta
+      </span>
+      <span class="bm-pill">
+        <i class="bi bi-bell"></i> 3 recordatorios activos
+      </span>
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="row g-3 mb-4">
+    <div class="col-12 col-md-4">
+      <div class="bm-card card h-100">
+        <div class="card-body d-flex justify-content-between align-items-start">
+          <div>
+            <div class="bm-kpi-number">3</div>
+            <div class="bm-kpi-label">Tareas próximas a vencer</div>
+          </div>
+          <span class="badge-soft badge-soft-warning">
+            <i class="bi bi-exclamation-triangle"></i> Esta semana
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="bm-card card h-100">
+        <div class="card-body d-flex justify-content-between align-items-start">
+          <div>
+            <div class="bm-kpi-number">2</div>
+            <div class="bm-kpi-label">Clases de refuerzo reservadas</div>
+          </div>
+          <span class="badge-soft badge-soft-primary">
+            <i class="bi bi-calendar-check"></i> Confirmadas
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="bm-card card h-100">
+        <div class="card-body d-flex justify-content-between align-items-start">
+          <div>
+            <div class="bm-kpi-number">7,4</div>
+            <div class="bm-kpi-label">Media últimos exámenes</div>
+          </div>
+          <span class="badge-soft badge-soft-success">
+            <i class="bi bi-arrow-up-right"></i> +0,3 vs. mes pasado
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resumen + gráfico -->
+  <div class="row g-4 mb-4">
+
+    <!-- Resumen -->
+    <div class="col-12 col-xl-5">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Resumen de la semana</h2>
+          <span class="badge-soft badge-soft-primary">
+            <i class="bi bi-lightning-charge"></i> Vista rápida
+          </span>
+        </div>
+
+        <div class="card-body small">
+          <ul class="list-unstyled mb-3">
+            <li class="mb-2">
+              <i class="bi bi-journal-text text-primary me-2"></i>
+              <strong>Examen de Matemáticas II</strong> · miércoles 10:30
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-pencil-square text-primary me-2"></i>
+              Entrega <strong>problemas de Física</strong> · mañana 23:59
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-chat-square-text text-primary me-2"></i>
+              <strong>Comentario de Lengua</strong> · viernes 18:00
+            </li>
+          </ul>
+
+          <div class="alert alert-light border-0 d-flex align-items-start gap-2 mb-0">
+            <i class="bi bi-info-circle text-primary mt-1"></i>
+            <div>
+              Si completas las tareas de Física hoy, el resto de la semana queda más ligera.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gráfico -->
+    <div class="col-12 col-xl-7">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Progreso por asignaturas</h2>
+          <div class="d-flex align-items-center gap-2">
+            <span class="small text-muted">Últimos 30 días</span>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-outline-light border-secondary-subtle dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Matemáticas
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item active" href="#">Matemáticas</a></li>
+                <li><a class="dropdown-item" href="#">Física</a></li>
+                <li><a class="dropdown-item" href="#">Lengua</a></li>
+                <li><a class="dropdown-item" href="#">Inglés</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <canvas id="progressChart" height="120"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Próximas clases + recomendado -->
+  <div class="row g-4 mb-4">
+
+    <!-- Próximas clases -->
+    <div class="col-12 col-xl-7">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Próximas clases de refuerzo</h2>
+          <a href="#" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-plus-circle me-1"></i> Reservar nueva
+          </a>
+        </div>
+
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle bm-table mb-0">
+              <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Asignatura</th>
+                <th>Modalidad</th>
+                <th>Estado</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Lu 09</td>
+                <td>18:00</td>
+                <td>Matemáticas II</td>
+                <td><span class="badge-soft badge-soft-primary">Presencial</span></td>
+                <td><span class="badge-soft badge-soft-success">Reservada</span></td>
+              </tr>
+              <tr>
+                <td>Mi 11</td>
+                <td>17:00</td>
+                <td>Física</td>
+                <td><span class="badge-soft badge-soft-primary">Online</span></td>
+                <td><span class="badge-soft badge-soft-warning">Plazas libres</span></td>
+              </tr>
+              <tr>
+                <td>Ju 12</td>
+                <td>19:30</td>
+                <td>Técnicas de estudio</td>
+                <td><span class="badge-soft badge-soft-primary">Online</span></td>
+                <td><span class="badge-soft badge-soft-success">Reservada</span></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Recomendado -->
+    <div class="col-12 col-xl-5">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Recomendado para hoy</h2>
+          <span class="badge-soft badge-soft-primary">
+            <i class="bi bi-magic"></i> Personalizado
+          </span>
+        </div>
+
+        <div class="card-body small">
+          <ul class="list-unstyled mb-3">
+            <li class="mb-2">
+              <strong>Test rápido · Derivadas</strong><br>
+              <span class="text-muted">10 preguntas · Estimado: 10 minutos</span>
+            </li>
+            <li class="mb-2">
+              <strong>Vídeo · Trucos para integrales</strong><br>
+              <span class="text-muted">7 minutos · Reforzar tema del último examen</span>
+            </li>
+            <li class="mb-2">
+              <strong>Reservar tutoría 1:1</strong><br>
+              <span class="text-muted">Viernes 18:00 · Profesor de Matemáticas</span>
+            </li>
+          </ul>
+
+          <button class="btn btn-primary w-100 mb-2">
+            <i class="bi bi-play-circle me-1"></i>
+            Empezar test rápido
+          </button>
+          <button class="btn btn-outline-primary w-100">
+            <i class="bi bi-calendar-plus me-1"></i>
+            Reservar tutoría sugerida
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Actividad + logros -->
+  <div class="row g-4 mb-2">
+
+    <!-- Actividad -->
+    <div class="col-12 col-xl-7">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Actividad reciente en el chat</h2>
+          <a href="#" class="small text-decoration-none">
+            Ver todo <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </div>
+
+        <div class="card-body">
+          <div class="d-flex flex-column gap-3">
+            <div class="bm-activity-item">
+              <div class="fw-semibold">
+                <i class="bi bi-person-video3 text-primary me-2"></i> Prof. Matemáticas
+              </div>
+              <div>«Revisa los ejercicios 3 y 4 del tema de límites, te ayudarán para el examen.»</div>
+              <span>Hace 2 horas · Matemáticas II</span>
+            </div>
+
+            <div class="bm-activity-item">
+              <div class="fw-semibold">
+                <i class="bi bi-people text-primary me-2"></i> Grupo Lengua
+              </div>
+              <div>Han compartido un esquema para el comentario de texto del viernes.</div>
+              <span>Hace 5 horas · Lengua</span>
+            </div>
+
+            <div class="bm-activity-item">
+              <div class="fw-semibold">
+                <i class="bi bi-building text-primary me-2"></i> Coordinación centro
+              </div>
+              <div>Nuevo material disponible: «Simulacro PAU Ciencias 2025».</div>
+              <span>Ayer · Noticias del centro</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Logros -->
+    <div class="col-12 col-xl-5">
+      <div class="bm-card card h-100">
+        <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
+          <h2 class="h6 mb-0">Logros y motivación</h2>
+          <i class="bi bi-trophy-fill text-warning"></i>
+        </div>
+
+        <div class="card-body small">
+          <div class="mb-3">
+            <div class="bm-chip mb-1">
+              <i class="bi bi-star-fill"></i> Constancia nivel 1
+            </div>
+            <div class="text-muted">Has estudiado al menos 4 días/semana durante las últimas 3 semanas.</div>
+          </div>
+
+          <div class="mb-3">
+            <div class="bm-chip mb-1">
+              <i class="bi bi-patch-check-fill"></i> Tests completados
+            </div>
+            <div class="text-muted">Llevas <strong>5 tests</strong> completados esta semana.</div>
+          </div>
+
+          <div class="alert alert-light border-0 mb-1">
+            <i class="bi bi-emoji-smile me-2 text-primary"></i>
+            Mantén la racha dos días más para desbloquear una tutoría extra con descuento.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

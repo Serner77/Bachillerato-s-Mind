@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Bachillerato's Mind - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bm-page">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Volver a la página de acceso">
+        <i class="bi bi-mortarboard-fill text-primary fs-4"></i>
+        <span>Bachillerato's Mind</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="bm-center">
+    <div class="bm-container">
+      <div class="bm-hero">
+        <div class="bm-card bm-card-narrow card">
+          <div class="card-body p-4 p-md-4">
+
+            <div class="text-center mb-3">
+              <h1 class="h5 mb-1">Iniciar sesión</h1>
+              <p class="text-muted small mb-0">
+                Accede a tu panel para ver horario, progreso y material.
+              </p>
+            </div>
+
+            <form id="loginForm" class="mt-4" novalidate>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label small text-muted">Usuario / correo</label>
+                <input
+                  id="loginEmail"
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="nombre@correo.com"
+                  autocomplete="username"
+                  required
+                >
+                <div class="invalid-feedback">Escribe un correo válido.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label small text-muted">Contraseña</label>
+                <input
+                  id="loginPassword"
+                  name="password"
+                  type="password"
+                  class="form-control"
+                  placeholder="••••••••"
+                  autocomplete="current-password"
+                  required
+                >
+                <div class="invalid-feedback">La contraseña es obligatoria.</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Acceder
+              </button>
+
+              <div class="text-center mt-3">
+                <a href="#" class="small text-primary text-decoration-none" onclick="return false;">
+                  He olvidado mi contraseña
+                </a>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
