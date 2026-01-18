@@ -1,19 +1,10 @@
 <div class="container-fluid px-0">
 
-  <h1 class="h4 mb-1">Chat y comunicación</h1>
-  <p class="text-muted mb-4">
-    Conéctate con tus profesores y compañeros de forma rápida y clara.
-  </p>
-
   <div class="row g-4">
 
-    <!-- ===================================== -->
-    <!--         LISTA DE CONVERSACIONES       -->
-    <!-- ===================================== -->
     <div class="col-12 col-lg-4">
       <div class="bm-card card h-100">
 
-        <!-- Header de conversaciones -->
         <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
           <h2 class="h6 mb-0">Conversaciones</h2>
           <button class="btn btn-sm btn-outline-primary" style="padding: 0.25rem 0.55rem;">
@@ -21,7 +12,6 @@
           </button>
         </div>
 
-        <!-- Buscador -->
         <div class="px-3 pt-2 pb-2">
           <div class="input-group">
             <span class="input-group-text bg-light border-0">
@@ -33,12 +23,10 @@
           </div>
         </div>
 
-        <!-- Conversaciones -->
         <div class="card-body p-0">
 
           <div class="list-group list-group-flush">
 
-            <!-- PROFESOR SELECCIONADO -->
             <a class="list-group-item list-group-item-action d-flex gap-3 py-3 active"
                style="
                  background-color: var(--bm-primary-soft) !important;
@@ -58,7 +46,6 @@
               <span class="badge-soft badge-soft-primary small align-self-center">1</span>
             </a>
 
-            <!-- GRUPO -->
             <a class="list-group-item list-group-item-action d-flex gap-3 py-3">
               <div class="bm-avatar bg-light text-primary">
                 <i class="bi bi-people"></i>
@@ -69,7 +56,6 @@
               </div>
             </a>
 
-            <!-- COORDINACIÓN -->
             <a class="list-group-item list-group-item-action d-flex gap-3 py-3">
               <div class="bm-avatar bg-light text-primary">
                 <i class="bi bi-building"></i>
@@ -88,13 +74,9 @@
       </div>
     </div>
 
-    <!-- ===================================== -->
-    <!--         PANEL PRINCIPAL DE CHAT       -->
-    <!-- ===================================== -->
     <div class="col-12 col-lg-8">
       <div class="bm-card card h-100 d-flex flex-column">
 
-        <!-- Header del chat -->
         <div class="card-header bm-card-header bg-transparent d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center gap-3">
             <div class="bm-avatar bg-primary text-white">M</div>
@@ -108,17 +90,12 @@
           </span>
         </div>
 
-        <!-- ===================================== -->
-        <!--               MENSAJES                -->
-        <!-- ===================================== -->
         <div class="card-body" style="height: 460px; overflow-y: auto;">
 
-          <!-- Día -->
           <div class="text-center my-2">
             <span class="badge-soft badge-soft-primary small">Hoy</span>
           </div>
 
-          <!-- Profesor msg -->
           <div class="mb-3 d-flex flex-column">
             <div class="p-3 bg-light rounded shadow-sm" style="max-width: 75%;">
               Hola Ana, recuerda repasar los ejercicios 3 y 4 del tema de límites.
@@ -127,7 +104,6 @@
             <span class="text-muted small mt-1">16:32</span>
           </div>
 
-          <!-- Material compartido -->
           <div class="mb-4 d-flex flex-column">
             <div class="p-3 bg-light rounded shadow-sm" style="max-width: 75%;">
               <div class="fw-semibold mb-1">
@@ -138,7 +114,6 @@
             <span class="text-muted small mt-1">16:33</span>
           </div>
 
-          <!-- Alumno msg -->
           <div class="mb-3 d-flex flex-column align-items-end">
             <div class="p-3 rounded text-white shadow-sm"
                  style="max-width: 75%; background: var(--bm-primary);">
@@ -148,7 +123,6 @@
             <span class="text-muted small mt-1">16:34</span>
           </div>
 
-          <!-- Profesor explicación -->
           <div class="mb-3 d-flex flex-column">
             <div class="p-3 bg-light rounded shadow-sm" style="max-width: 75%;">
               Claro. El paso 2 consiste en aplicar la desigualdad para límites laterales.  
@@ -160,14 +134,12 @@
             <span class="text-muted small mt-1">16:35</span>
           </div>
 
-          <!-- Sistema -->
           <div class="text-center my-3">
             <div class="small text-muted">
               — Recomendación: repasar “Derivadas · Conceptos base” —
             </div>
           </div>
 
-          <!-- Alumno -->
           <div class="mb-3 d-flex flex-column align-items-end">
             <div class="p-3 rounded text-white shadow-sm"
                  style="max-width: 75%; background: var(--bm-primary);">
@@ -176,7 +148,6 @@
             <span class="text-muted small mt-1">16:36</span>
           </div>
 
-          <!-- Profesor -->
           <div class="mb-3 d-flex flex-column">
             <div class="p-3 bg-light rounded shadow-sm" style="max-width: 75%;">
               Sí, es el resultado correcto. ¡Buen trabajo!
@@ -184,7 +155,6 @@
             <span class="text-muted small mt-1">16:37</span>
           </div>
 
-          <!-- Alumno -->
           <div class="mb-3 d-flex flex-column align-items-end">
             <div class="p-3 rounded text-white shadow-sm"
                  style="max-width: 75%; background: var(--bm-primary);">
@@ -195,7 +165,6 @@
 
         </div>
 
-        <!-- Input -->
         <div class="card-footer bg-white border-0">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Escribe un mensaje…">
